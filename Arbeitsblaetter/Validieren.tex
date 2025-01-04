@@ -1,0 +1,22 @@
+% !TeX root = ../Skript_HTML.tex
+\cohead{\Large\textbf{Validieren}}
+\section{Validieren}
+HTML existiert seit Ende der 80er und hat sich mit der Zeit stark verändert. Zum Beispiel gibt es Unmengen an Tags, die als deprecated, d.h. veraltet markiert sind. Diese Tags sollten eigentlich nicht mehr verwendet werden aber es stehen noch viele Webseiten online, die diese Tags verwenden. Die best practices, also das empfohlene Vorgehen beim Erstellen von Webseiten hat sich ebenfalls stark gewandelt. Bis heute haben Browser unterschiedliche Funktionsumfänge, z.B. ist das Format JPG für Bilder veraltet. Es gibt deutlich bessere Formate, die aber jeweils nicht von allen Browsern unterstützt werden.
+
+Lange Rede, kurzer Sinn, HTML ist ein Sammelsurium verschiedenster Techniken, um Webseiten zu gestalten, von denen viele aus Gründen der Abwärtskompatibilität noch unterstützt werden aber nicht mehr verwendet werden sollen. Wie kann Ottonormalschüler entscheiden, ob er seine Webseite vernünftig erstellt hat? Die empfohlenen Techniken werden regelmäßig (alle paar Jahre) in einem Standard zusammengefasst, aktuell HTML 5.2. Nur, weil ein Browser eine Webseite korrekt darstellt, muss die Webseite noch lange nicht dem Standard entsprechen. Glücklicherweise gibt es Validatoren, die prüfen, ob eine Webseite dem Standard entspricht.
+
+\begin{Exercise}[title=Prüfe deine Webseite (schueler.html in deinem Heimverzeichnis) mit einem Validator, label=Validator1]
+
+    Zum Beispiel W3Schools stellt unter  von \href{https://validator.w3.org/#validate_by_upload}{validator.w3.org} einen Validator zur Verfügung.
+\end{Exercise}
+
+\bigskip
+
+Unsere Webseite entspricht also nicht dem Standard, wird aber von einem Browser (vermutlich) korrekt dargestellt.
+
+\begin{Exercise}[title=Passe deine Webseite so an{,} dass sie dem Standard entspricht., label=Validator2]
+    Ergänze am Anfang deiner Webseite noch vor dem \lstinline|<html>|-Tag folgenden Tag: \lstinline|<!DOCTYPE html>|.
+    Erweitere den \lstinline|<html>|-Tag zu  \lstinline|<html  lang="de">|
+
+    Informiere dich über die Bedeutung der eingefügten Tags und validiere deine Webseite dann nochmals.
+\end{Exercise}

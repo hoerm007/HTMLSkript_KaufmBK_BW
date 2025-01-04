@@ -1,0 +1,358 @@
+% !TeX root = ../Skript_HTML.tex
+\cohead{\Large\textbf{Lösungen}}
+\section{Lösungen}
+Anbei Beispiele für die HTML bzw. CSS-Dateien nach jedem Kapitel. Insbesondere die CSS-Datei kann auch anders aufgebaut werden.
+\begin{enumerate}
+    \item Begriffe und Grundgerüst
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<html>
+<head>
+<title>Schülerseite</title>
+</head>
+<body>
+Willkommen auf meiner Webseite!
+<br>
+<br>
+<p>Ich bin Schüler des WG West in Stuttgart.</p>
+</body>
+</html>
+    \end{lstlisting}
+    \item Umlaute und Sonderzeichen
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<html>
+<head>
+<title>Schülerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+Willkommen auf meiner Webseite!
+<br>
+<br>
+<p>Ich bin Schüler des WG West in Stuttgart.</p>
+</body>
+</html>
+    \end{lstlisting}
+    \item Validieren
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Schülerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+Willkommen auf meiner Webseite!
+<br>
+<br>
+<p>Ich bin Schüler des WG West in Stuttgart.</p>
+</body>
+</html>
+    \end{lstlisting}
+    \item Textauszeichnungen
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Haralds Webseite</h1>
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin Sch&uuml;ler des <strong>WG West in Stuttgart</strong>.</p>
+</body>
+</html>
+    \end{lstlisting}
+    \item Cascading Style Sheets
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Haralds Webseite</h1>
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin Sch&uuml;ler des <strong>WG West in Stuttgart</strong>.</p>
+</body>
+</html>
+    \end{lstlisting}
+    \textit{style.css}
+    \begin{lstlisting}
+body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red}
+    \end{lstlisting}
+    \item Listen
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Haralds Webseite</h1>
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin Sch&uuml;ler des <strong>WG West in Stuttgart</strong>.</p>
+<br>
+Was ich <strong>gut</strong> finde:
+<ul>
+<li>Informatik-Unterricht</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+Was ich <em>nicht</em> gut finde:
+<ol>
+<li>Listen</li>
+<li>Ironie</li>
+<li>Wiederholungen</li>
+<li>Listen</li>
+</ol>
+</body>
+</html>
+    \end{lstlisting}
+    \textit{style.css}
+    \begin{lstlisting}
+body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red;}
+ul {list-style-type: square;}
+ol {list-style-type: upper-roman; color: green;}
+    \end{lstlisting}
+    \item Bilder
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Haralds Webseite</h1>
+<img src="Bilder/Bild.png" alt="Ein von canva.com erzeugtes KI-Bild" height="200">
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin Sch&uuml;ler des <strong>WG West in Stuttgart</strong>.</p>
+<br>
+Was ich <strong>gut</strong> finde:
+<ul>
+<li>Informatik-Unterricht</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+Was ich <em>nicht</em> gut finde:
+<ol>
+<li>Listen</li>
+<li>Ironie</li>
+<li>Wiederholungen</li>
+<li>Listen</li>
+</ol>
+</body>
+</html>
+    \end{lstlisting}
+    \item Abschnitte definieren und formatieren
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div class="meineErsteKlasse">
+<h1>Haralds Webseite</h1>
+<img src="Bilder/Bild.png" alt="Ein von canva.com erzeugtes KI-Bild" height="200">
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin Sch&uuml;ler des <strong>WG West in Stuttgart</strong>.
+</div>
+<br>
+Was ich <strong>gut</strong> finde:
+<ul>
+<li>Informatik-Unterricht</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+Was ich <em>nicht</em> gut finde:
+<ol>
+<li>Listen</li>
+<li>Ironie</li>
+<li>Wiederholungen</li>
+<li>Listen</li>
+</ol>
+</body>
+</html>
+    \end{lstlisting}
+    \textit{style.css}
+    \begin{lstlisting}
+    body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red;}
+ul {list-style-type: square;}
+ol {list-style-type: upper-roman; color: green;}
+
+.meineErsteKlasse {
+    text-align: center;
+}
+    \end{lstlisting}
+    \item Verlinkungen
+
+    \textit{schuler.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sch&uuml;lerseite</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div class="meineErsteKlasse">
+<h1>Haralds Webseite</h1>
+<img src="Bilder/Bild.png" alt="Ein von canva.com erzeugtes KI-Bild" height="200">
+<h2>Willkommen auf meiner Webseite!</h2>
+<br>
+<hr>
+<br>
+<p>Ich bin <a href="#SchuelerBild">Sch&uuml;ler</a> des <strong><a href="https://www.wg-west.de/">WG West in Stuttgart</a></strong>.
+</div>
+<br>
+Was ich <strong>gut</strong> finde:
+<ul>
+<li>Informatik-Unterricht</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+Was ich <em>nicht</em> gut finde:
+<ol>
+<li>Listen</li>
+<li>Ironie</li>
+<li>Wiederholungen</li>
+<li>Listen</li>
+</ol>
+Das ist meine Klasse:
+<br>
+<img id="SchuelerBild" src="Bilder/Klasse.png" alt="Ein von canva.com erzeugtes KI-Bild meiner Klasse" height="400"><br>
+Das ist mein <a href="stundenplan.html">Stundenplan</a>.
+</body>
+</html>
+    \end{lstlisting}
+    \textit{stundenplan.html}
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Unterricht</title>
+<meta charset="utf-8">
+</head>
+<body>
+So sieht mein Stundenplan aus:
+</body>
+</html>
+    \end{lstlisting}
+    \item Tabellen
+
+    \textit{stundenplan.html}:
+    \begin{lstlisting}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Unterricht</title>
+<meta charset="utf-8">
+</head>
+<body>
+So sieht mein Stundenplan aus:<br>
+<table>
+<tr>
+<th></th>
+<th>Mo</th>
+<th>Di</th>
+<th>Mi</th>
+<th>Do</th>
+<th>Fr</th>
+</tr>
+<tr>
+<td>1./2. Stunde</td>
+<td>Mathe</td>
+<td>BWL</td>
+<td>BWL</td>
+<td>Deutsch</td>
+<td>Üfa</td>
+</tr>
+<tr>
+<td>3./4. Stunde</td>
+<td>Informatik</td>
+<td>Wirtschaft</td>
+<td>Englisch</td>
+<td>Reli</td>
+<td>Üfa</td>
+</tr>
+<tr>
+<td>5./6. Stunde</td>
+<td>Deutsch</td>
+<td>GGK</td>
+<td>SK</td>
+<td></td>
+<td>Üfa</td>
+</tr>
+<tr>
+<td colspan="6">Hier gehts <a href="schueler.html">zur&uuml;ck</a></td>
+</tr>
+</table>
+</body>
+</html>
+    \end{lstlisting}
+    \textit{style.css}
+    \begin{lstlisting}
+body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red;}
+ul {list-style-type: square;}
+ol {list-style-type: upper-roman; color: green;}
+table, th, td {border: 1px solid black;}
+th {font-style: italic;}
+td, th {text-align: center; color:blue;}
+table {width:800px;}
+
+.meineErsteKlasse {
+    text-align: center;
+}
+    \end{lstlisting}
+\end{enumerate}

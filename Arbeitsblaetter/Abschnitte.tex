@@ -1,0 +1,17 @@
+% !TeX root = ../Skript_HTML.tex
+\cohead{\Large\textbf{Abschnitte}}
+\section{Abschnitte definieren und formatieren}
+Häufig will man einen ganzen Abschnitt einer Webseite gleich formatieren, z.B. wollen wir den oberen Teil der Webseite komplett zentrieren:
+\begin{minipage}[t]{\textwidth}
+    \includegraphics[width=\linewidth]{\pics/Abschnitte.png}
+\end{minipage}
+Dazu bietet HTML das \lstinline|<div>...</div>|-Tag an. Dabei steht div für division bzw. Abschnitt auf Deutsch. Das Tag kann man um einen beliebig großen Teil des bodys der Webseite schreiben. Man kann beliebig viele solcher Abschnitte definieren und jeden solchen Abschnitt dann formatieren. Dazu erstellen wir in der CSS-Datei eine eigene Klasse.
+
+Bisher haben wir in der CSS-Datei Eintragungen vom Typ \lstinline|tagname {attributName1:Wert; attributName2:Wert;}|. Der Syntax für eigene Klassen ist dem für Tags ganz ähnlich. Wir beginnen nun nur mit einem Punkt statt dem Namen des Tags: \lstinline|.klassenName {attributName1:Wert, attributName2:Wert;}|.
+
+\begin{Exercise}[title=, label=Abschnitte]
+    \begin{enumerate}
+        \item Erstelle eine eigene Klasse mit beliebigem Namen in deiner CSS-Datei mit dem Attribut \lstinline|text-align| und dem Wert \lstinline|center|.
+        \item Ändere dein \textit{schueler.html} so ab, dass der obere Teil bis einschließlich \textit{WG West in Stuttgart} zentriert ist. Recherchiere dazu wie man ein \lstinline|<div>|-Tag mit einer eigenen CSS-Klasse verwendet.
+    \end{enumerate}
+\end{Exercise}

@@ -1,0 +1,171 @@
+\documentclass[a4paper,12pt, headsepline, ngerman]{scrartcl}
+
+%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{scrlayer-scrpage}
+\usepackage[nodisplayskipstretch]{setspace}     %vspace before/after math mode
+\usepackage{geometry}
+\usepackage{listings}                           %\lstinline[language=C]!while{$a || $b}!
+\usepackage{babel}				                %Silbentrennung mit ngerman
+\usepackage{booktabs} 			                % For prettier tables
+\usepackage{mathtools}  		                %Mathe-Paket
+\usepackage{color}				                %\textcolor{blue}{text...}
+\usepackage[dvipsnames]{xcolor}                 %Mehr Auswahl bei Farben
+\usepackage[T1]{fontenc}		                %Umlaute
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{ulem}                               %Durchstreichen von Wörtern mit \sout{text}
+\usepackage{adjustbox}
+\usepackage{enumitem}				            %Aufzählungen [label=\alph*)]
+\usepackage{tcolorbox} 				            %Merkboxen
+\usepackage{marvosym}                           %\Lightning
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}			    %Hyperlinks setzen
+\usepackage[answerdelayed]{exercise}	        %Nach hyperref einbinden!
+%%%%%%%%%%%%%% FARBEN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeback}{rgb}{0.95,0.95,0.92}
+\definecolor{codebasic}{rgb}{0,0,0.8}
+\definecolor{codekeyword}{rgb}{0.8,0,0}
+\definecolor{tcback}{rgb}{.95,.95,.95}          %tcolorbox Hintergrund
+\definecolor{tcframe}{rgb}{.89,.15,.21}         %tcolorbox Umrandung
+%%%%%%%%%%%%%%% KONFIGURATION VON PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper, portrait, left=1.5cm, right=2cm, top=1cm, bottom=2cm, headsep=0.2cm, includehead, head=27.30193pt}
+\setlist[enumerate]{nosep, topsep=0pt}	        %Kleinere Abstände bei Aufzählungen
+\setlist[itemize]{noitemsep, topsep=0pt}
+\lstdefinestyle{mystyle}{
+	language=HTML,
+    basicstyle=\color{codebasic}\ttfamily,
+	backgroundcolor=\color{codeback},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{codekeyword},
+    tagstyle=\color{codekeyword},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=false,
+	extendedchars=true,
+	numbers=none,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2,
+	columns=fullflexible %erzeugt keine komischen Leerzeichen mehr, die man erst beim Kopieren sieht
+}
+\lstset{style=mystyle}
+\lstset{literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+	{~}{{\textasciitilde}}1
+}
+\setkomafont{headsepline}{\color{black}}
+%Exercise-Paket Umbenennungen
+\renewcommand{\listexercisename}{Liste der Aufgaben}%
+\renewcommand{\ExerciseName}{Aufgabe}%
+\renewcommand{\AnswerName}{L{\"o}sung zu Aufgabe}%
+\renewcommand{\ExerciseListName}{Aufg.}%
+\renewcommand{\AnswerListName}{L{\"o}sung}%
+\renewcommand{\ExePartName}{Teil}%
+\renewcommand{\ArticleOf}{von\ }%
+\renewcommand{\ExerciseHeader}{%
+	\textbf{\large\ExerciseHeaderDifficulty\ExerciseName\ %
+	\ExerciseHeaderNB\normalsize\ExerciseHeaderTitle\ExerciseHeaderOrigin}\medskip}
+\renewcommand{\AnswerHeader}{
+	\medskip\textbf{L{\"o}sung zu \ExerciseName\ \ExerciseHeaderNB}\smallskip}
+%tcolorbox Konfiguration
+\tcbset{
+%	frame code={}
+%	center title,
+%	left=0pt,
+%	right=0pt,
+%	top=0pt,
+%	bottom=0pt,
+	fonttitle=\large\bfseries,
+	colback=tcback,
+	colframe=tcframe,
+%	width=\dimexpr\textwidth\relax,
+%	enlarge left by=0mm,
+%	boxsep=5pt,
+%	arc=0pt,outer arc=0pt,
+}
+%%%%%%%%%%%%%%%%%%%%%% STYLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{headings} %KOMA-Script mit Kopf-Fuß-Zeilen
+\raggedbottom
+\raggedright
+\onehalfspacing
+\def\pics{./pics}
+
+\begin{document}
+	\setlength\parindent{0pt} %keine Einrückungen beim Start eines Paragraphen
+
+	%Header
+	\lohead{HTML}
+	%\cohead{} %im Arbeitsblatt
+	\rohead{}
+	\cofoot[\pagemark]{\pagemark}
+	\title{HTML
+
+	Ein Skript für das Berufskolleg}
+	\author{Hermann Maier}
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\null\vfill
+	\copyright \the\year{} Maier, Hermann, \href{mailto:maier@privatemail.com}{maier@privatemail.com}
+
+    \begin{tcolorbox}\raggedright
+        Aktuelle Version inklusive Quelldateien unter \href{https://github.com/hoerm007/HTMLSkript_KaufmBK_BW}{https://github.com/hoerm007/HTMLSkript\_KaufmBK\_BW}
+    \end{tcolorbox}
+
+	Dieses Werk unterliegt der CC BY-NC-SA 4.0 Lizenz \href{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.de}{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.de}.
+
+	Sie dürfen:
+	\begin{itemize}
+		\item Teilen — das Material in jedwedem Format oder Medium vervielfältigen und weiterverbreiten
+		\item Bearbeiten — das Material remixen, verändern und darauf aufbauen
+	\end{itemize}
+	Unter folgenden Bedingungen:
+	\begin{itemize}
+		\item Namensnennung - Sie müssen angemessene Urheber- und Rechteangaben machen , einen Link zur Lizenz beifügen und angeben, ob Änderungen vorgenommen wurden. Diese Angaben dürfen in jeder angemessenen Art und Weise gemacht werden, allerdings nicht so, dass der Eindruck entsteht, der Lizenzgeber unterstütze gerade Sie oder Ihre Nutzung besonders.
+		\item Nicht kommerziell - Sie dürfen das Material nicht für kommerzielle Zwecke nutzen.
+		\item Weitergabe unter gleichen Bedingungen - Wenn Sie das Material remixen, verändern oder anderweitig direkt darauf aufbauen, dürfen Sie Ihre Beiträge nur unter derselben Lizenz wie das Original verbreiten.
+	\end{itemize}
+	\newpage
+	\tableofcontents
+	\thispagestyle{empty}
+	\newpage
+	\def\pics{./pics}
+	\rohead{}
+	\input{./Arbeitsblaetter/Begriffe.tex}
+	\newpage
+    \input{./Arbeitsblaetter/Sonderzeichen.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Validieren.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Textauszeichnungen.tex}
+    \newpage
+    \input{./Arbeitsblaetter/CSS.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Listen.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Bilder.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Abschnitte.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Links.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Tabellen.tex}
+    \newpage
+    \input{./Arbeitsblaetter/Lösungen.tex}
+\end{document}
+
