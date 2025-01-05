@@ -5,8 +5,8 @@ Es gibt zwar noch immer HTML-Tags, die zur Formatierung der Webseite dienen, wie
 
 Der grundlegende Style (Formatierung abgesehen von physischen Textauszeichnungen) wird über das sogenannte CSS festgelegt. CSS steht für Cascading Style Sheets, was zusätzliche Dateien impliziert. Dies ist jedoch nicht immer notwendig. CSS lässt sich auf 3 möglichen Wegen verwenden:
 \begin{enumerate}
-    \item Inline, indem man ein style-Attribut innerhalb eines HTML-Tags verwendet, falls man tatsächlich nur die Formatierung dieses einen Tags ändern will.
-    \item Intern innerhalb einer Datei, indem man ein \lstinline|<style>|-Tag innerhalb des \lstinline|<head>|-Bereichs der HTML-Datei einfügt, falls man die Formatierung innerhalb dieser einen Datei ändern will.
+    \item Inline, indem man ein style-Attribut innerhalb eines HTML-Tags verwendet, falls man tatsächlich nur die Formatierung dieses einen Tags ändern will, z.B. wird \lstinline|<strong style="color:red;">Beispieltext</strong>| hervorgehoben und Rot dargestellt.
+    \item Intern innerhalb einer Datei, indem man ein \lstinline|<style>|-Tag in den \lstinline|<head>|-Bereich der HTML-Datei einfügt, falls man die Formatierung innerhalb dieser einen Datei ändern will. Diese Einträge sind mit denen, die wir in einer CSS-Datei anlegen werden identisch, nur, dass sie in die HTML-Datei geschrieben werden.
     \item Extern, indem man über ein  \lstinline|<link>|-Tag im \lstinline|<head>|-Bereich der HTML-Datei eine externe CSS-Datei einbindet. Diese Datei kann man in verschiedenen HTML-Dateien einbinden und so die Formatierung für mehrere Webseiten zentral verwalten.
 \end{enumerate}
 
@@ -21,11 +21,11 @@ Wir werden nur die externe Variante verwenden. Die anderen Varianten sind von de
 \end{Exercise}
 In der CSS-Datei kann man nun für verschiedene Tags die Formatierung ändern. Die Syntax einer CSS-Datei dazu sieht wie folgt aus:
 
-Name des Tags (mehrere kommaseparierte Tags zulässig) \{ Name der zu ändernden Eigenschaft : neuer Wert der Eigenschaft; \}
+\lstinline|Tagname (mehrere kommaseparierte Tags zulässig){Eigenschaft:neuer Wert;}|
 
-Will man z.B. die Farbe der größten Überschriften in Blau ändern, so fügt man folgenden Eintrag hinzu: \lstinline|h1 {color: blue;}|
+Will man z.B. die Farbe der größten Überschriften in Blau ändern, so fügt man folgenden Eintrag hinzu: \lstinline|h1 {color:blue;}|
 
-Man kann in den geschweiften Klammern beliebig viele Eigenschaften ändern. Die Namen und zulässigen Werte können z.B. bei w3cschools gefunden werden.
+Man kann in den geschweiften Klammern beliebig viele Eigenschaften ändern. Die Namen und zulässigen Werte können z.B. bei w3schools gefunden werden.
 
 \begin{Exercise}[title=, label=CSS2]
     Nimm (über die CSS-Datei) folgende Änderungen für die bisherige Seite vor:
