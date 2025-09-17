@@ -1,0 +1,31 @@
+body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red;text-decoration-line: underline;}
+ul {list-style-type: square;}
+ol {list-style-type: upper-roman; color: green;}
+table, th, td {border: 1px solid black;}
+th {font-style: italic;}
+td, th {text-align: center; color:blue;}
+table {width:800px;}
+
+.meineErsteKlasse {
+	text-align: center;
+}body {background-color: yellow;}
+h1 {text-align: center;}
+h1, h2 {color: red;text-decoration-line: underline;}
+ul {list-style-type: square;}
+ol {list-style-type: upper-roman; color: green;}
+table, th, td {border: 1px solid black;}
+th {font-style: italic;}
+td, th {text-align: center; color:blue;}
+table {width:800px;}
+
+.meineErsteKlasse {text-align: center;}
+
+th:hover {background-color: red;}
+
+td.roterHintergrund:hover {background-color: green; font-style: italic; color:yellow;}
+
+th:hover {background-color: red;}
+
+td.roterHintergrund:hover {background-color: green; font-style: italic; color:yellow;}
